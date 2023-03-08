@@ -1,17 +1,21 @@
 {% extends 'shop/basic.html' %}
-{% block title%} Checkout - QuickzyKart{% endblock %}
+{% block title%} Checkout - My Awesome Cart{% endblock %}
 {% block body %}
 <div class="container">
     <div class="col my-4">
-        <h2>Step 1 - QuickzyKart Express Checkout - Review Your Cart Items</h2>
+        <h2>Step 1 - My Awesome Cart Express Checkout - Review Your Cart Items</h2>
         <div class="my-4">
             <ul class="list-group" id="items">
             </ul>
+
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb" mt-3>
-                  <li class="breadcrumb-item active" aria-current="page">Your Cart Total is : <b>₹ <span id="totalPrice"></span></b> .Enter your details below and Place your order.Thanks for using QuickzyKart</li>
-                </ol>
-              </nav>
+  <ol class="breadcrumb mt-3">
+    <li class="breadcrumb-item active" aria-current="page">Your Cart Total Is <b>Rs. <span id="totalPrice"></span></b>. Enter your details below & place your order. Thanks for using My Awesome Cart!</li>
+  </ol>
+</nav>
+
+
+
             
         </div>
     </div>
@@ -19,6 +23,7 @@
         <h2>Step 2 - Enter Address & Other Details:</h2>
         <form method="post" action="/shop/checkout/">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
+            <input type="hidden" name="amount" id="amount">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputname">Name</label>
@@ -87,7 +92,6 @@ if ($.isEmptyObject(cart)) {
                 </li>`
         $('#items').append(mystr);
     }
-
 }
 document.getElementById('cart').innerHTML = sum;
 document.getElementById('totalPrice').innerHTML = totalPrice;
@@ -97,5 +101,6 @@ alert('Thanks for ordering with us. Your order is is {{id}}. Use it to track you
 localStorage.clear();
 document.location = "/shop";
 {% endif %}
+$('#amount').val($('#totalPrice').html())
 </script>
 {% endblock %}
