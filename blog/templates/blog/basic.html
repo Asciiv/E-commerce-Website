@@ -10,7 +10,46 @@
 
     <title>{% block title%} {% endblock %}</title>
      <style>
-       {% block css %} {% endblock %}
+       {% block css %} 
+       .navbar {
+        background-color: #007bff; /* sets the background color */
+        color: #ffffff; /* sets the text color */
+        padding: 10px; /* adds some padding */
+      }
+      
+      .nav-link {
+        color: #ffffff; /* sets the link color */
+      }
+      
+      .nav-link:hover {
+        color: #f8f9fa; /* changes the link color on hover */
+      }
+      
+      .form-control {
+        background-color: #f8f9fa; /* sets the search bar background color */
+      }
+      
+      .btn-secondary {
+        background-color: #343a40; /* sets the cart button background color */
+        border-color: #343a40; /* sets the cart button border color */
+      }
+      
+      .btn-secondary:hover {
+        background-color: #23272b; /* changes the cart button background color on hover */
+        border-color: #23272b; /* changes the cart button border color on hover */
+      }
+      
+      .btn-outline-success {
+        color: #ffffff; /* sets the search button text color */
+        border-color: #ffffff; /* sets the search button border color */
+      }
+      
+      .btn-outline-success:hover {
+        color: #007bff; /* changes the search button text color on hover */
+        border-color: #007bff; /* changes the search button border color on hover */
+      }
+      
+      {% endblock %}
   </style>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="363h2z7J"></script>
   </head>

@@ -1,22 +1,42 @@
-{% extends 'shop/basic.html' %}
-{% block title%} My Awesome Cart Tracker{% endblock %}
+{% extends './basic.html' %}
+{% block title %}Payment Status{% endblock title %}
+
 {% block body %}
-<div class="container">
-    {{response}}
-    <div class="col my-4">
+  <h1 class="text-center">Payment Status</h1>
 
-        <h2>Payment status regarding your order Id {{response.ORDERID}}</h2>
-        {% if response.RESPCODE == '01' %}
-        ORDER SUCCESS
+  <div class="container mt-5 pt-5">
+    {% for message in messages %}
+      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        {% if response %}
+          <div class="alert alert-{{ response.status }} text-center" role="alert">
+            <h2>PAYMENT {{ response.status|upper }}</h2>
+          </div>
+          <div class="container mt-3">
+            <div class="col my-4">
+              <h2>Payment status regarding your order ID {{ response.order_id }}</h2>
+              {% if response.status == 'authorized' %}
+                <p>Payment ID: {{ response.payment_id }}</p>
+                <p>Amount: {{ response.amount}}{{ response.currency }}</p>
+                <p>Payment method: {{ response.method }}</p>
+              {% else %}
+                <p>Payment ID: {{ response.payment_id }}</p>
+                <p>Error code: {{ response.error.code }}</p>
+                <p>Error description: {{ response.error.description }}</p>
+              {% endif %}
+            </div>
+          </div>
         {% else %}
-        ORDER FAILURE
-        {% endif%}
-
+          <div class="alert alert-danger text-center" role="alert">
+            <h2>No payment status to display.</h2>
+          </div>
+        {% endif %}
+      </div>
     </div>
-
-</div>
-{% endblock %}
-{% block js %}
-<script>
-</script>
-{% endblock %}
+  </div>
+{% endblock body %}

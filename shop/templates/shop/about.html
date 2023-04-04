@@ -1,15 +1,162 @@
 {% extends 'shop/basic.html' %}
 {% block title %} About Us{% endblock %}
 {% block body %}
+<style>
+  /* Set default font family */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+.row{
+  border-color: darkorange;
+  border-style: 2px solid  ;
+  background-image: linear-gradient(to bottom left, #30a7d6, #d063d1);
+  background-size: cover;
+  font-size:large;
+}
 
+/* Jumbotron */
+.jumbotron {
+  background-image: url('https://i.imgur.com/5Z5PN5C.jpg');
+  background-image: linear-gradient(to bottom right, lightgreen, lightblue);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: hsl(261, 72%, 35%);
+  text-shadow: 2px 2px #333;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(10, 1, 1);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.jumbotron a.btn-primary {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: hsl(219, 61%, 46%);
+  border-color: #8dd0fc;
+  margin-top: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Features Section */
+.features {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.features h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.features p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.features .btn-secondary {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: hsl(218, 75%, 46%);
+  border-color: #fc8d8d;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Footer Section */
+footer {
+  background-color: #1f0505;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 80px;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+  /* CSS for role=button element before hover */
+[role=button] {
+  background-color: #00c8ff;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* CSS for role=button element after hover */
+[role=button]:hover {
+  background-color: #0062cc;
+}
+/* add space between navbar and QuickzyKart */
+#quickzykart {
+  margin-top: 50px;
+}
+
+/* apply margin and padding to Learn More button */
+#learn-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+
+ 
+</style>
 
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
+  <div class="jumbotron ">
+    <div class="container pt-5 mt-4">
       <h1 class="display-3">QuickzyKart</h1>
-      <p>This is a template for a simple marketing or informational website.QuickzyKart is a e-commerce website which includes purchasing products of your choice in a eco-friendly and in budget-friendly.</p>
+      <p><b>QuickzyKart</b> is a e-commerce website which includes purchasing products of your choice in a budget-friendly.Our website consists of all daily requirement products.We sells products of local vendors too.QuickzyKart makes customer feel good with our features like Tracking products,products price less than mrp,360 degree images,discounts on festival season,blog,etc.Important thing is after adding products in cart is payment.Payment can be done with credit card,debit card,googlepay,upi,phonepe,bharatpe in secure ,privately.There are many more exiting features to explore in our website.<b>So why are you waiting?Go and Explore.</b> </p>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
@@ -18,18 +165,18 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2>Budget-friendly</h2>
+        <p>We sell products  which is less than retail price.We will not increase price of product first and then decrease in less margin.We sell in respectable price for our customers.Customer satisfaction is our first priorty.</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2>Blog</h2>
+        <p>We give detail information about the newly added products,updated products,trending products,the features which is going to be added in our websites,social media post and many more things. </p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <h2>Tracking </h2>
+        <p>Tracking the products after ordering the products makes customer know about the products where it is so that customers cannot worry about order.Customer can track product using order number whenever they want.</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
     </div>

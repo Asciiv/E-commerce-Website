@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+   
+    background-color: #f4f4f4;
+}
+
+/*Footer Menis*/
+
+footer{
+    width: 100%;
+    background-color: #080d2b;
+    color: #ffffff;
+    min-height: 30px;
+    border-top:#ff4500 5px solid;
+    position: fixed;
+    bottom: 0;
+}
+
+footer ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+footer ul.active{
+    display: none;
+}
+footer li{
+    display: inline;
+    padding: 0 5% 0 5%;
+    display: inline;
+}
+footer ul li .menu{
+    width: 25px;
+    border-radius: 10px;
+    margin-top: -3px;
+    }
+
+footer ul li .menu:hover{
+    width: 25px;
+    border:2px solid #ff4500;
+}
+
+footer  a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+footer a:hover{
+    color: #ff4500;      
+}
+
+a.active{
+    display: inline;
+    color: #ff4500;
+    font-weight: bold;
+    
+}
+
+@media(max-width:400px){
+    footer li{
+    padding: 0 4% 0 4%;
+    }
+}
+
+
+/*POST*/
+
+.gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+    .gedf-main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        }
+    .gedf-card {
+        margin-bottom: 2.77rem;
+        }
+    }
+
+.dropdown-toggle::after {
+    content: none;
+    display: none;
+    }
+
+a{
+    color: #080d2b;
+}
+a:hover{
+    color: #ff4500;
+}
+
+/*Profile*/
+
+
+
+#profile {
+  height: 160px;
+  background: white;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-left: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+#profile .image {
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  height: 75px;
+  width: 75px;
+  border-radius: 10px;
+}
+#profile .image img {
+  width: inherit;
+  height: inherit;
+  border:solid white;
+  border-radius: 8px;
+}
+#profile .name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #444;
+}
+#profile .nickname {
+  color: #888;
+  font-size: 0.9rem;
+  padding-bottom: 7px;
+}
+
+#profile .location .material-icons {
+  position: relative;
+  top: 3px;
+  font-size: 1rem;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.following,
+.followers {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #bbb;
+  font-weight: 300;
+}
+
+.followers {
+  float: right;
+  padding-right: 30px;
+}
+
+.bottom {
+  margin-top: 10px;
+}
+
+.count {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+.mainbtn{
+  color: #f4f4f4;
+  background-color: #080d2b;
+}
+
+.mainbtn:hover{
+  background-color: #ff4500;
+}
+
+button, button:hover, button:focus{
+  border: none;
+}
+
+.followbtn{
+  width: 100px;
+  background-color:#080d2b;
+  color: #f4f4f4;
+  margin: auto;
+}
+
+@media(min-width:420px){
+    body::-webkit-scrollbar {
+        width: 7px;
+    }
+     
+    body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    body::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+    div::-webkit-scrollbar {
+        width: 5px;
+    }
+     
+    div::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    div::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+    section::-webkit-scrollbar {
+        width: 5px;
+    }
+     
+    section::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    section::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+    ul::-webkit-scrollbar {
+        width: 5px;
+    }
+     
+    ul::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    ul::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+}
+
+
+.well-social-post {
+    border-radius: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding:0;
+}
+
+.well-social-post .glyphicon,
+.well-social-post .fa,
+.well-social-post [class^='icon-'],
+.well-social-post [class*='icon-'] {
+    font-weight: bold;
+    color: #999999;
+}
+
+.well-social-post a,
+.well-social-post a:hover,
+.well-social-post a:active,
+.well-social-post a:focus {
+    text-decoration: none;
+}
+
+.well-social-post .list-inline {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.well-social-post .list-inline li {
+    position: relative;
+}
+
+.well-social-post .list-inline li.active::after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    top: 30px;
+    left: 50%;
+    left: -webkit-calc(50% - 5px);
+    left: -moz-calc(50%-5px);
+    left: calc(50% - 5px);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #dddddd;
+}
+
+.well-social-post .list-inline li.active a {
+    color: #222222;
+    font-weight: bold;
+}
+
+.well-social-post .form-control {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.well-social-post .list-inline {
+    padding: 10px;
+}
+
+.well-social-post .list-inline li + li {
+    margin-left: 10px;
+}
+
+.well-social-post .post-actions {
+    margin: 0;
+    background-color: #f6f7f8;
+    border-top-color: #e9eaed;
+}                               
+
+.like_active{
+  color:#ff4500;
+}
+
+.click:hover{
+  cursor:pointer;
+}
+
+code,
+kbd,
+pre,
+.img-rounded,
+.img-thumbnail,
+.img-circle,
+.form-control,
+.btn,
+.btn-link,
+.dropdown-menu,
+.list-group-item,
+.input-group-addon,
+.input-group-btn,
+.nav-tabs a,
+.nav-pills a,
+.navbar,
+.navbar-toggle,
+.icon-bar,
+.breadcrumb,
+.pagination,
+.pager *,
+.label,
+.badge,
+.jumbotron,
+.thumbnail,
+.alert,
+.progress,
+.panel,
+.well,
+.modal-content,
+.tooltip-inner,
+.popover,
+.popover-title,
+.card,
+.card-footer,
+.carousel-indicators li {
+    border-radius:0 !important;
+}
+

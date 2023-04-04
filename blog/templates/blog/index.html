@@ -1,5 +1,39 @@
-{%extends 'blog/basic.html'%}
-{%block body%}
+{% extends 'blog/basic.html' %}
+
+{% block head %}
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .stretched-link {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .stretched-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .bd-placeholder-img {
+            object-fit: cover;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
 <div class="container mt-3">
     <div class="row my-2">
         {% for item in myposts %}
@@ -7,23 +41,24 @@
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary">
-                        <{{item.head0}}>
+                        <{{ item.head0 }}>
                     </strong>
-                    <h3 class="mb-0">{{item.tilte}}</h3>
+                    <h3 class="mb-0">{{ item.title }}</h3>
                     <div class="mb-1 text-muted"></div>
-                    <p class="card-text mb-auto">{{item.head1}}</p>
-                    <a href="blogpost/{{item.post_id}}" class="stretched-link">Continue reading</a>
+                    <p class="card-text mb-auto">{{ item.head1 }}</p>
+                    <a href="blogpost/{{ item.post_id }}" class="stretched-link">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img src="/media/{{item.thumbnail}}" class="bd-placeholder-img" width="200" height="250" aria-label="Placeholder: Thumbnail">
+                    <img src="/media/{{ item.thumbnail }}" class="bd-placeholder-img" width="200" height="250" aria-label="Placeholder: Thumbnail">
                     </img>
                 </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:2%}
+        {% if forloop.counter|divisibleby:2 %}
     </div>
     <div class="row my-2">
-        {%endif%}
-        {%endfor%}</div>
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
-{%endblock%}
+{% endblock %}

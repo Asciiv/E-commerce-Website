@@ -10,12 +10,434 @@
 
     <title>{% block title%} {% endblock %}</title>
      <style>
-       {% block css %} {% endblock %}
+       {% block css %}
+       
+         .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #6B3C75;
+    }
+    
+    .form-group label {
+        font-weight: bold;
+        color: #383838;
+    }
+    
+    .list-group {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #F8F8F8;
+    }
+    
+    .list-group-item {
+        border: none;
+        font-size: 16px;
+        color: #2F2F2F;
+    }
+    
+    .badge {
+        font-size: 14px;
+        background-color: #6B3C75;
+    }
+    
+    .btn-primary {
+        background-color: #6B3C75;
+        border-color: #6B3C75;
+        color: #FFFFFF;
+    }
+    
+    .btn-primary:hover {
+        background-color: #A94E8F;
+        border-color: #A94E8F;
+        color: #FFFFFF;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(107, 60, 117, 0.5);
+        
+    }
+    *{
+      margin: 0;
+      padding: 0;
+  }
+  body{
+      font: 15px/1.5 Arial, Helvetica, sans-serif;
+     
+      background-color: #f4f4f4;
+  }
+  
+  /*Footer Menis*/
+  
+  footer{
+      width: 100%;
+      background-color: #080d2b;
+      color: #ffffff;
+      min-height: 30px;
+      border-top:#ff4500 5px solid;
+      position: fixed;
+      bottom: 0;
+  }
+  
+  footer ul{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+  footer ul.active{
+      display: none;
+  }
+  footer li{
+      display: inline;
+      padding: 0 5% 0 5%;
+      display: inline;
+  }
+  footer ul li .menu{
+      width: 25px;
+      border-radius: 10px;
+      margin-top: -3px;
+      }
+  
+  footer ul li .menu:hover{
+      width: 25px;
+      border:2px solid #ff4500;
+  }
+  
+  footer  a{
+      color:#ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 25px;
+  }
+  
+  footer a:hover{
+      color: #ff4500;      
+  }
+  
+  a.active{
+      display: inline;
+      color: #ff4500;
+      font-weight: bold;
+      
+  }
+  
+  @media(max-width:400px){
+      footer li{
+      padding: 0 4% 0 4%;
+      }
+  }
+  
+  
+  /*POST*/
+  
+  .gedf-wrapper {
+      margin-top: 0.97rem;
+  }
+  
+  @media (min-width: 992px) {
+      .gedf-main {
+          padding-left: 4rem;
+          padding-right: 4rem;
+          }
+      .gedf-card {
+          margin-bottom: 2.77rem;
+          }
+      }
+  
+  .dropdown-toggle::after {
+      content: none;
+      display: none;
+      }
+  
+  a{
+      color: #080d2b;
+  }
+  a:hover{
+      color: #ff4500;
+  }
+  
+  /*Profile*/
+  
+  
+  
+  #profile {
+    height: 160px;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 25px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #profile .image {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    height: 75px;
+    width: 75px;
+    border-radius: 10px;
+  }
+  #profile .image img {
+    width: inherit;
+    height: inherit;
+    border:solid white;
+    border-radius: 8px;
+  }
+  #profile .name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #444;
+  }
+  #profile .nickname {
+    color: #888;
+    font-size: 0.9rem;
+    padding-bottom: 7px;
+  }
+  
+  #profile .location .material-icons {
+    position: relative;
+    top: 3px;
+    font-size: 1rem;
+  }
+  
+  .shadow {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .overflow {
+    overflow: hidden;
+  }
+  
+  .following,
+  .followers {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300;
+  }
+  
+  .followers {
+    float: right;
+    padding-right: 30px;
+  }
+  
+  .bottom {
+    margin-top: 10px;
+  }
+  
+  .count {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  
+  
+  .mainbtn{
+    color: #f4f4f4;
+    background-color: #080d2b;
+  }
+  
+  .mainbtn:hover{
+    background-color: #ff4500;
+  }
+  
+  button, button:hover, button:focus{
+    border: none;
+  }
+  
+  .followbtn{
+    width: 100px;
+    background-color:#080d2b;
+    color: #f4f4f4;
+    margin: auto;
+  }
+  
+  @media(min-width:420px){
+      body::-webkit-scrollbar {
+          width: 7px;
+      }
+       
+      body::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+       
+      body::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+      div::-webkit-scrollbar {
+          width: 5px;
+      }
+       
+      div::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+       
+      div::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+      section::-webkit-scrollbar {
+          width: 5px;
+      }
+       
+      section::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+       
+      section::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+      ul::-webkit-scrollbar {
+          width: 5px;
+      }
+       
+      ul::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      }
+       
+      ul::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+  }
+  
+  
+  .well-social-post {
+      border-radius: 0;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding:0;
+  }
+  
+  .well-social-post .glyphicon,
+  .well-social-post .fa,
+  .well-social-post [class^='icon-'],
+  .well-social-post [class*='icon-'] {
+      font-weight: bold;
+      color: #999999;
+  }
+  
+  .well-social-post a,
+  .well-social-post a:hover,
+  .well-social-post a:active,
+  .well-social-post a:focus {
+      text-decoration: none;
+  }
+  
+  .well-social-post .list-inline {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+  }
+  
+  .well-social-post .list-inline li {
+      position: relative;
+  }
+  
+  .well-social-post .list-inline li.active::after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      top: 30px;
+      left: 50%;
+      left: -webkit-calc(50% - 5px);
+      left: -moz-calc(50%-5px);
+      left: calc(50% - 5px);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #dddddd;
+  }
+  
+  .well-social-post .list-inline li.active a {
+      color: #222222;
+      font-weight: bold;
+  }
+  
+  .well-social-post .form-control {
+      width: 100%;
+      min-height: 100px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+  }
+  
+  .well-social-post .list-inline {
+      padding: 10px;
+  }
+  
+  .well-social-post .list-inline li + li {
+      margin-left: 10px;
+  }
+  
+  .well-social-post .post-actions {
+      margin: 0;
+      background-color: #f6f7f8;
+      border-top-color: #e9eaed;
+  }                               
+  
+  .like_active{
+    color:#ff4500;
+  }
+  
+  .click:hover{
+    cursor:pointer;
+  }
+  
+  code,
+  kbd,
+  pre,
+  .img-rounded,
+  .img-thumbnail,
+  .img-circle,
+  .form-control,
+  .btn,
+  .btn-link,
+  .dropdown-menu,
+  .list-group-item,
+  .input-group-addon,
+  .input-group-btn,
+  .nav-tabs a,
+  .nav-pills a,
+  .navbar,
+  .navbar-toggle,
+  .icon-bar,
+  .breadcrumb,
+  .pagination,
+  .pager *,
+  .label,
+  .badge,
+  .jumbotron,
+  .thumbnail,
+  .alert,
+  .progress,
+  .panel,
+  .well,
+  .modal-content,
+  .tooltip-inner,
+  .popover,
+  .popover-title,
+  .card,
+  .card-footer,
+  .carousel-indicators li {
+      border-radius:0 !important;
+  }
+  
+  
+       {% endblock %}
   </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="/shop">QuickzyKart</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,6 +449,10 @@
         <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/profile">My Profile</a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" href="/shop/about">About Us</a>
       </li>
 
@@ -35,17 +461,30 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/shop/contact">Contact Us</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/blog">Blog</a>
       </li>
 
+       <li class="nav-item">
+        <a class="nav-link" href="/shop/contact">Contact Us</a>
+      </li>
+      {% if request.user.is_authenticated %}
+      <a class="nav-link" href="/user/logout/"><U><b>Logout</b></U></a>
+      {% else %}
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Signin
+        </button>
+        <div class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/user/signup/">SignUp</a>
+          <a class="dropdown-item" href="/user/login/">Login</a>
+        </div>
+      </div>
 
+      {% endif %}
+      
     </ul>
-    <form method ='get' action ='/shop/search/'class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-      name="search" id ="search">
+    <form method='get' action='/shop/search/' class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
@@ -56,6 +495,15 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 </button>
   </div>
 </nav>
+  {% block content %}
+  {% for message in messages %}
+  <div class = "alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-ds-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+
+  {% endblock content %}
   {% block body %} {% endblock %}
 
     <!-- Optional JavaScript -->
