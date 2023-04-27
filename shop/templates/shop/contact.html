@@ -1,6 +1,72 @@
 {% extends 'shop/basic.html' %}
 {% block title %} Contact Us {% endblock %}
 {% block body %}
+
+<style>
+
+body {
+  background-image: url("https://i.imgur.com/Ns4iZMB.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  /* background-color: lightblue; */
+  background-image: radial-gradient( #c88989, rgb(241, 241, 207));
+
+}
+
+.container {
+  background-color: #32a9e9e6;
+  background-image: linear-gradient(to bottom right, lightgreen, lightblue);
+
+  border-radius: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3),
+              -20px -20px 50px rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  margin: 100px auto;
+  max-width: 600px;
+}
+
+h3 {
+  color: #333;
+  text-align: center;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+              inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+  color: #333;
+  font-size: 18px;
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 150px;
+}
+
+.btn {
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+              -5px -5px 10px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  cursor: pointer;
+  font-size
+
+</style>
  <div class="container">
      <h3>Contact Us</h3>
      <form action="/shop/contact/" method="post">{% csrf_token %}
@@ -9,11 +75,11 @@
     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
   </div>
           <div class="form-group">
-    <label for="name">Email</label>
+    <label for="name">Email-ID</label>
     <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
   </div>
           <div class="form-group">
-    <label for="name">Phome</label>
+    <label for="name">Phone No.</label>
     <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
   </div>
           <div class="form-group">

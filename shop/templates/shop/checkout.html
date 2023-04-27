@@ -1,6 +1,113 @@
 {% extends 'shop/basic.html' %}
 {% block title %} Checkout -- My Awesome Cart{% endblock %}
 {% block body %}
+
+<style>
+body {
+  background-image: url('ecommerce-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to top left, lightgreen, skyblue);
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+
+}
+
+form {
+  background-color: #f7f7f7;
+  box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.5), 
+              10px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 600px;
+  background-image: linear-gradient(to top left, #e1c4ea, hwb(29 27% 11%));
+
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"] {
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), 
+              inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 
+              5px 5px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #fff;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group.col-md-6 {
+  width: 48%;
+}
+
+.form-group.col-md-4 {
+  width: 30%;
+}
+
+.form-group.col-md-2 {
+  width: 18%;
+}
+
+
+</style>
 <div class="container">
     <div class="col my-4">
         <h2> Step 1 - My Awesome Cart Express Checkout - Review Your Cart items </h2>
@@ -34,11 +141,11 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="city" name"city">
+                    <input type="text" class="form-control" id="city" name="city">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">State</label>
-                    <input type="text" class="form-control" id="state" name"state" placeholder="Enter State">
+                    <input type="text" class="form-control" id="state" name="state" placeholder="Enter State">
                     </select>
                 </div>
                 <div class="form-group col-md-2">
