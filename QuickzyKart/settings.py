@@ -139,8 +139,8 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-razorpay_id = 'rzp_test_WlFGAwY29dwISU'
-razorpay_account_id = '0FPr7Fm1tXD20U07U30oru9V'
+razorpay_id = ''
+razorpay_account_id = ''
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
