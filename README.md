@@ -1,6 +1,26 @@
-This is my E-commerce Website QuickzyKart build with Djano consists of MyProfile | About Us | Tracker | Blog | Contact Us | Login Section in this i have implemented Otp on mail feature with google app we also have integrated payement gateway system with razorpay.
-In Home page we can surf a lot of product as per our choice we have also implemented search bar functionality and Cart functionality for addition and removal of prodcucts
-In Conctact Page we can query and it will reach our django administration.
-In My Profile Section We can view the Products  or order status
-In Tracker we Have functionailty For Tracking The product with Product Id
-In Blog we can Like or Comment On Product Blog
+QuickzyKart - Your Ultimate E-commerce Platform
+Welcome to QuickzyKart, an innovative E-commerce website built with Django. Explore a wide range of products, manage your orders, and enjoy seamless online shopping with our comprehensive features.
+
+Features
+MyProfile
+Track Orders: Easily monitor the status of your orders and view detailed information about your purchases.
+About Us
+Get to Know Us: Learn about QuickzyKart's mission, values, and the team dedicated to bringing you the best shopping experience.
+Tracker
+Real-time Product Tracking: Track your products effortlessly using the unique product ID.
+Blog
+Engage with Content: Like and comment on our product blogs, stay updated with the latest trends, and share your thoughts with the community.
+Contact Us
+Reach Out: Submit your queries directly through the contact page, and our Django administration will promptly address your concerns.
+Login
+Secure Access: Sign in securely with OTP verification through Google for an extra layer of security.
+Additional Features
+Payment Gateway
+Razorpay Integration: Enjoy smooth and secure transactions with our integrated Razorpay payment gateway.
+Home Page
+Product Browsing: Surf through a vast collection of products tailored to your preferences with ease.
+Search Bar
+Find Exactly What You Need: Utilize our search bar to quickly locate products.
+Cart Functionality
+Manage Your Cart: Add or remove products effortlessly to create your perfect shopping cart.
+Experience the future of online shopping with QuickzyKart. Happy shopping!
